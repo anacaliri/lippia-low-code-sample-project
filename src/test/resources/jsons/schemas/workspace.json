@@ -1,0 +1,330 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Generated schema for Root",
+  "type": "object",
+  "properties": {
+    "costRate": {
+      "type": "object",
+      "properties": {
+        "amount": {
+          "type": "number"
+        },
+        "currency": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "amount",
+        "currency"
+      ]
+    },
+    "currencies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "isDefault": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "code",
+          "id",
+          "isDefault"
+        ]
+      }
+    },
+    "featureSubscriptionType": {
+      "type": "string"
+    },
+    "features": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "hourlyRate": {
+      "type": "object",
+      "properties": {
+        "amount": {
+          "type": "number"
+        },
+        "currency": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "amount",
+        "currency"
+      ]
+    },
+    "id": {
+      "type": "string"
+    },
+    "imageUrl": {
+      "type": "string"
+    },
+    "memberships": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "costRate": {
+            "type": "object",
+            "properties": {
+              "amount": {
+                "type": "number"
+              },
+              "currency": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "amount",
+              "currency"
+            ]
+          },
+          "hourlyRate": {
+            "type": "object",
+            "properties": {
+              "amount": {
+                "type": "number"
+              },
+              "currency": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "amount",
+              "currency"
+            ]
+          },
+          "membershipStatus": {
+            "type": "string"
+          },
+          "membershipType": {
+            "type": "string"
+          },
+          "targetId": {
+            "type": "string"
+          },
+          "userId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "costRate",
+          "hourlyRate",
+          "membershipStatus",
+          "membershipType",
+          "targetId",
+          "userId"
+        ]
+      }
+    },
+    "name": {
+      "type": "string"
+    },
+    "subdomain": {
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "type": "boolean"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "enabled",
+        "name"
+      ]
+    },
+    "workspaceSettings": {
+      "type": "object",
+      "properties": {
+        "adminOnlyPages": {
+          "type": "string"
+        },
+        "automaticLock": {
+          "type": "object",
+          "properties": {
+            "changeDay": {
+              "type": "string"
+            },
+            "dayOfMonth": {
+              "type": "number"
+            },
+            "firstDay": {
+              "type": "string"
+            },
+            "olderThanPeriod": {
+              "type": "string"
+            },
+            "olderThanValue": {
+              "type": "number"
+            },
+            "type": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "changeDay",
+            "dayOfMonth",
+            "firstDay",
+            "olderThanPeriod",
+            "olderThanValue",
+            "type"
+          ]
+        },
+        "canSeeTimeSheet": {
+          "type": "boolean"
+        },
+        "canSeeTracker": {
+          "type": "boolean"
+        },
+        "currencyFormat": {
+          "type": "string"
+        },
+        "decimalFormat": {
+          "type": "boolean"
+        },
+        "defaultBillableProjects": {
+          "type": "boolean"
+        },
+        "forceDescription": {
+          "type": "boolean"
+        },
+        "forceProjects": {
+          "type": "boolean"
+        },
+        "forceTags": {
+          "type": "boolean"
+        },
+        "forceTasks": {
+          "type": "boolean"
+        },
+        "isProjectPublicByDefault": {
+          "type": "boolean"
+        },
+        "lockTimeEntries": {
+          "type": "string"
+        },
+        "lockTimeZone": {
+          "type": "string"
+        },
+        "multiFactorEnabled": {
+          "type": "boolean"
+        },
+        "numberFormat": {
+          "type": "string"
+        },
+        "onlyAdminsCreateProject": {
+          "type": "boolean"
+        },
+        "onlyAdminsCreateTag": {
+          "type": "boolean"
+        },
+        "onlyAdminsCreateTask": {
+          "type": "boolean"
+        },
+        "onlyAdminsSeeAllTimeEntries": {
+          "type": "boolean"
+        },
+        "onlyAdminsSeeBillableRates": {
+          "type": "boolean"
+        },
+        "onlyAdminsSeeDashboard": {
+          "type": "boolean"
+        },
+        "onlyAdminsSeePublicProjectsEntries": {
+          "type": "boolean"
+        },
+        "projectFavorites": {
+          "type": "boolean"
+        },
+        "projectGroupingLabel": {
+          "type": "string"
+        },
+        "projectPickerSpecialFilter": {
+          "type": "boolean"
+        },
+        "round": {
+          "type": "object",
+          "properties": {
+            "minutes": {
+              "type": "string"
+            },
+            "round": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "minutes",
+            "round"
+          ]
+        },
+        "timeRoundingInReports": {
+          "type": "boolean"
+        },
+        "timeTrackingMode": {
+          "type": "string"
+        },
+        "trackTimeDownToSecond": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "adminOnlyPages",
+        "automaticLock",
+        "canSeeTimeSheet",
+        "canSeeTracker",
+        "currencyFormat",
+        "decimalFormat",
+        "defaultBillableProjects",
+        "forceDescription",
+        "forceProjects",
+        "forceTags",
+        "forceTasks",
+        "isProjectPublicByDefault",
+        "lockTimeEntries",
+        "lockTimeZone",
+        "multiFactorEnabled",
+        "numberFormat",
+        "onlyAdminsCreateProject",
+        "onlyAdminsCreateTag",
+        "onlyAdminsCreateTask",
+        "onlyAdminsSeeAllTimeEntries",
+        "onlyAdminsSeeBillableRates",
+        "onlyAdminsSeeDashboard",
+        "onlyAdminsSeePublicProjectsEntries",
+        "projectFavorites",
+        "projectGroupingLabel",
+        "projectPickerSpecialFilter",
+        "round",
+        "timeRoundingInReports",
+        "timeTrackingMode",
+        "trackTimeDownToSecond"
+      ]
+    }
+  },
+  "required": [
+    "costRate",
+    "currencies",
+    "featureSubscriptionType",
+    "features",
+    "hourlyRate",
+    "id",
+    "imageUrl",
+    "memberships",
+    "name",
+    "subdomain",
+    "workspaceSettings"
+  ]
+}

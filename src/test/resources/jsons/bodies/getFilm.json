@@ -1,6 +1,0 @@
-{
-  "query": "query Root($filmId: ID) { film(id: $filmId) { director planetConnection { planets { name } } title episodeID releaseDate } }",
-  "variables": {
-    "filmId": "String"
-  }
-}
