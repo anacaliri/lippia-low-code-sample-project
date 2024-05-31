@@ -1,4 +1,0 @@
-{
-  "query": "query Root { allFilms { films { id title episodeID releaseDate } } }",
-  "variables": {}
-}
