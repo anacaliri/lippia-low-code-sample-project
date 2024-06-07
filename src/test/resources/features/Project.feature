@@ -1,4 +1,4 @@
-@project @run
+@project
 Feature: Project
 
   Background:
@@ -25,11 +25,11 @@ Feature: Project
     Then the status code should be 201
     * define projectId = response.id
     Examples:
-      | projectName       |
-      | Lippia Low Code 3 |
+      | projectName             |
+      | Lippia Low Code Project |
 
   @failAddNewProjectDueToAuthorization
-  Scenario Outline: Add new project
+  Scenario Outline: Fail to add new project due to api key not exist
     Given call Workspace.feature@getWorkspaceInfo
     And header x-api-key = <key>
     And endpoint /v1/workspaces/{{workspaceId}}/projects
@@ -115,6 +115,18 @@ Feature: Project
     Examples:
       | name |
       | pepe |
+
+  @failUpdateProjectOnWorkspace
+  Scenario Outline: Fail to update project on workspace
+    Given call Project.feature@findProjectById
+    And header x-api-key = $(env.x_api_key)
+    And endpoint /v1/workspaces/{{workspaceId}}/projects/{{projectId}}
+    And  set value <name> of key name in body jsons/bodies/updateProject.json
+    When execute method PUT
+    Then the status code should be 400
+    Examples:
+      | name |
+      |      |
 
 
 
