@@ -5,7 +5,6 @@ Feature: Workspace
     Given base url $(env.base_url)
     And header Content-Type = application/json
 
-
   @getAllMyWorkspaces
   Scenario: Get all my workspaces
     Given header x-api-key = $(env.x_api_key)

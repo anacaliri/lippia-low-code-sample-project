@@ -5,7 +5,6 @@ Feature: Project
     Given base url $(env.base_url)
     And header Content-Type = application/json
 
-
   @getAllProjectsOnWorkspace
   Scenario: Get all projects on workspace
     Given call Workspace.feature@getWorkspaceInfo

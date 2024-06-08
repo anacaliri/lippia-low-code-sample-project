@@ -4,8 +4,7 @@ Feature: User
   Background:
     Given base url $(env.base_url)
     And header Content-Type = application/json
-
-
+    
   @findAllUsersOnWorkspace
   Scenario: Find all users on workspace
     Given call Project.feature@addNewProject
