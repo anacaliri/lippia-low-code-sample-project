@@ -1,4 +1,4 @@
-@workspace
+@workspace @run
 Feature: Workspace
 
   Background:
@@ -8,10 +8,21 @@ Feature: Workspace
 
   @getAllMyWorkspaces
   Scenario: Get all my workspaces
-    Given endpoint $(env.version)/workspaces
+    Given header x-api-key = $(env.x_api_key)
+    And endpoint $(env.version)/workspaces
     When execute method GET
     Then the status code should be 200
     * define workspaceId = response[0].id
+
+  @failToGetAllMyWorkspacesDueToAuthorization
+  Scenario Outline: Fail to get all my workspaces due to missing authorization key
+    Given endpoint $(env.version)/workspaces
+    When execute method GET
+    Then the status code should be 401
+    And response should be message = <message>
+    Examples:
+      | message                              |
+      | Multiple or none auth tokens present |
 
   @addNewWorkspace
   Scenario Outline: Add new workspace

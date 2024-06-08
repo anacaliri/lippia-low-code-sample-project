@@ -1,4 +1,4 @@
-@project
+@project @run
 Feature: Project
 
   Background:
