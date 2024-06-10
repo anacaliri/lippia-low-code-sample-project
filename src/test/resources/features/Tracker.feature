@@ -47,7 +47,7 @@ Feature: Tracker
     * define timeEntryId = response[0].id
 
   @updateTimeEntryOnWorkspace
-  Scenario Outline: Fail to update time entry on workspace due to use un unenabled features
+  Scenario Outline: Update time entry on workspace
     Given call Tracker.feature@getTimeEntryForAUserOnWorkspace
     And header x-api-key = $(env.x_api_key)
     And endpoint /v1/workspaces/{{workspaceId}}/time-entries/{{timeEntryId}}
